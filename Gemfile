@@ -7,6 +7,8 @@ gem 'devise', '~> 4.9', '>= 4.9.3'
 
 gem 'faker'
 
+gem 'money-rails', '~> 1.12'
+
 gem "rails", "~> 7.0.8"
 
 gem "sprockets-rails"
