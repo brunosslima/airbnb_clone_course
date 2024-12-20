@@ -19,8 +19,21 @@
     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         <% @properties.each do |property| %>
             <div class="group relative">
-                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                <img src="https://www.hostaway.com/_gatsby/image/55e938ab93a1dc59867c0bcd4e4741fc/dcaa1c2e318c7b93b7150f23e87d9a24/how%20to%20find%20the%20right%20Airbnb%20property%20to%20buy.jpg?u=https%3A%2F%2Fimages.ctfassets.net%2Fpqmtoyw9z10u%2F3L6TUzq7bZcImfbv8lHeot%2F13e55c6b384984bea9a22be319d9bd0d%2Fhow_to_find_the_right_Airbnb_property_to_buy.jpg&a=w%3D960%26h%3D549%26fm%3Djpg%26q%3D75&cd=2024-03-26T05%3A56%3A37.329Z" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                <!-- Slider main container -->
+                <div class="swiper aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <% property.images.each do |image| %>
+                      <%= image_tag image, class:"swiper-slide h-full w-full object-cover object-center lg:h-full lg:w-full" %> 
+                    <% end %>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
                 </div>
                 <div class="mt-2 flex justify-between">
                     <h3 class="text-base font-medium text-gray-700">
